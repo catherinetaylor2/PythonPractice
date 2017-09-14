@@ -1,3 +1,5 @@
+import numpy as np 
+
 print("hello world");
 
 x = 3;
@@ -17,5 +19,7 @@ string = "HELLO";
 print(string);
 
 for i in range(0,5):
-    print("x = %i");
+    print("x = ", i);
 
+a = np.array([1,2,3]);
+print(a)
