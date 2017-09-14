@@ -15,3 +15,7 @@ if f==g:
 
 string = "HELLO";
 print(string);
+
+for i in range(0,5):
+    print("x = %i");
+
