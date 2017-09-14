@@ -22,4 +22,7 @@ for i in range(0,5):
     print("x = ", i);
 
 a = np.array([1,2,3]);
-print(a)
+print(a);
+
+for i in a:
+    print(i**3);
