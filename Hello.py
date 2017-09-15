@@ -3,7 +3,6 @@ import numpy as np
 print("hello world");
 
 x = 3;
-
 if x == 4:
     print("x is", 4);
 else:
@@ -35,3 +34,14 @@ for i in (map(square, a)):
     print ("i = ", i);
 
 
+
+
+b = [square(x) for x in a];
+print("b = ", b);
+
+c = [*map(square,a)];
+print("c = ", c);
+
+B = np.array(b);
+print("B =", B);
+print(B.shape);
