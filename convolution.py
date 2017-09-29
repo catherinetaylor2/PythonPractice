@@ -20,21 +20,21 @@ for y in range(0,img.size[0]):
         for i in range(0,k):
             for j in range(0,k):
                       sum = sum + paddedImage[x+2*N-i, y+2*N-j][1:4]*kernel[i,j];
-        I.putpixel((y,x), (np.int(sum[0]),np.int(sum[1]),np.int(sum[2]))); #pillow doesn't support floating point RGB
+        I.putpixel((y,x), (np.int(sum[0]),np.int(sum[1]),np.int(sum[2]))); #PIL doesn't support floating point RGB
 
 
 #Display before and after images
 fig = plt.figure();
-a=fig.add_subplot(1,2,1)
+a = fig.add_subplot(1,2,1);
 imgPlot = plt.imshow(img);
-a.set_title('Original image')
-a.set_yticklabels([])
-a.set_xticklabels([])
-a=fig.add_subplot(1,2,2)
+a.set_title('Original image');
+a.set_yticklabels([]);
+a.set_xticklabels([]);
+a = fig.add_subplot(1,2,2);
 imgPlot = plt.imshow(I);
-a.set_title('Filtered image')
-a.set_yticklabels([])
-a.set_xticklabels([])
+a.set_title('Filtered image');
+a.set_yticklabels([]);
+a.set_xticklabels([]);
 
 plt.show();
 
