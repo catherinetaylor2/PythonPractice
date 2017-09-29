@@ -11,13 +11,14 @@ data = (GD.getData(0));
 
 #chose initial point in each cluster
 
-p1 = random.randint(0, data.shape[0]);
-p2 =p1;
-while (p2 == p1):
- p2 = random.randint(0, data.shape[0]);
-initialPoint1 = data[p1,:];
-initialPoint2 = data[p2,:];
-
-print(p1, p2)
+p = np.zeros(2, dtype=np.int16 );
+p[0] = random.randint(0, data.shape[0]);
+p[1] = p[0];
+while (p[1] == p[0]):
+    p[1] = random.randint(0, data.shape[0]);
+P = np.zeros((2,2));
+P[0,:] = data[p[0],:];
+P[1,:] = data[p[1],:];
+print(P)
 
 
